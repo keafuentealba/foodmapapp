@@ -1,0 +1,33 @@
+.hide{
+  display : none;
+}
+
+#firtsScreen{
+  font-family: 'Merienda', cursive;
+}
+
+#secondScreen{
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+body{
+  background-color: #050a0f;
+}
+
+#logoNombre{
+  width: 90%;
+  height: auto;
+
+}
+
+#map{
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#tipo{
+  font-family: 'Merienda', cursive;
+  margin-left: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
