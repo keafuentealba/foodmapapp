@@ -82,11 +82,11 @@ window.getPlaces = (filter) => {
 		{lat: -33.4287426, lng: -70.6432182, description: '<b>La Gloria Sanguchería Peruana/b><br>RSanguchería Peruana', type: 'Peruana'},
 		{lat: -33.4335797, lng: -70.6489081, description: '<b>El Ají Seco</b><br>Restaurant de comida Peruana', type: 'Peruana'},
 		{lat:	-33.4245698,lng: 	-70.6588588, description: '<b>Ché Peruano</b><br>Restaurant de comida Peruana', type: 'Peruana'},
+		{lat: -33.4398386, lng: -70.6409837, description: '<b>Tambo (Lastarria)</b><br>Restaurant de comida Peruana', type: 'Peruana'},
+		{lat: -33.4388985, lng: -70.6357373, description: '<b>El Templo Del Inka</b><br>Restaurant de comida Peruana', type: 'Peruana'},
+		{lat: -33.4349771, lng: -70.6490732, description: '<b>El Encuentro Peruano</b><br>Restaurant de comida Peruana', type: 'Peruana'},
+		{lat: -33.4352188, lng: -70.6486655, description: '<b>Restaurante Victoria</b><br>Restaurant de comida Peruana', type: 'Peruan'},
 		
-		{lat: -33.4434129, lng: -70.6568968, description: '<b>Chino</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4434129, lng: -70.6568968, description: '<b>Chino</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4434129, lng: -70.6568968, description: '<b>Chino</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4434129, lng: -70.6568968, description: '<b>Chino</b><br>Restaurant de comida china', type: 'china'},
 
 		{lat: -33.4434129, lng: -70.6568968, description: '<b>Chino</b><br>Restaurant de comida china', type: 'china'},
 		{lat: -33.4434129, lng: -70.6568968, description: '<b>Chino</b><br>Restaurant de comida china', type: 'china'},
