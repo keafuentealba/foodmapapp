@@ -44,7 +44,8 @@ window.drawPlaces = (filter) => {
 			//se ejecuta al hacer click en el mapa
 			let points = getPlaces().filter((point) => {return point.lat == e.target._latlng.lat && point.lng == e.target._latlng.lng})
 			point = points[0];
-			document.getElementById("restaurantInfo").innerHTML = point.description
+			document.getElementById("restaurantInfo").innerHTML = point.description;
+			document.getElementById("restaurantName").innerHTML = point.title;
 			$('#selectedRestaurant').modal({show: true})
 		});
 	});
@@ -53,46 +54,48 @@ window.drawPlaces = (filter) => {
 
 window.getPlaces = (filter) => {
 	let points = [
-		{lat: -33.4227084, lng: -70.6126471, description: '<b>El Huerto</b><br>Restaurant de comida vegetariana', type: 'vegetariana'},
-		{lat: -33.4337536, lng: -70.685727, description: '<b>Casa Oriental</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4434129, lng: -70.6568968, description: '<b>Restaurante Chino Kam Cheng</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4770278, lng: -70.7255482, description: '<b>Buenos Chinos</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4337536, lng: -70.685727, description: '<b>Xing Fu</b><br>Restaurant de comida china', type: 'china'},
-		{lat:-33.4181889, lng: 	-70.6651911, description: '<b>Nueva China</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4242757, lng: -70.657123, description: '<b>Foodlays</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4231949, lng:-70.6596767, description: '<b>Restaurant China</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4240554, lng: -70.6717644, description: '<b>Restaurante Hao Hwa</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4252126, lng: -70.6574013, description: '<b>Los Chinos</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4252126, lng:-70.6574013, description: '<b>China Wok</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4424559, lng:	-70.6613808, description: '<b>Panda Junior</b><br>Restaurant de comida china', type: 'china'},
+		{lat: -33.4227084, lng: -70.6126471, title: 'El Huerto', description: 'Restaurant de comida vegetariana', type: 'Vegetariana'},
+		{lat: -33.4337536, lng: -70.685727, title: 'Casa Oriental', description: 'Restaurant de comida china', type: 'China'},
+		{lat: -33.4434129, lng: -70.6568968, title: 'Restaurante Chino Kam Cheng', description: 'Restaurant de comida china', type: 'China'},
+		{lat: -33.4770278, lng: -70.7255482, title: 'Buenos Chinos', description: 'Restaurant de comida china', type: 'China'},
+		{lat: -33.4337536, lng: -70.685727, title: 'Xing Fu', description: 'Restaurant de comida china', type: 'China'},
+		{lat:-33.4181889, lng: 	-70.6651911, title: 'Nueva China', description: 'Restaurant de comida china', type: 'China'},
+		{lat: -33.4242757, lng: -70.657123, title: 'Foodlays', description: 'Restaurant de comida china', type: 'China'},
+		{lat: -33.4231949, lng:-70.6596767, title: 'Restaurant China', description: 'Restaurant de comida china', type: 'China'},
+		{lat: -33.4240554, lng: -70.6717644, title: 'Restaurante Hao Hwa', description: 'Restaurant de comida china', type: 'China'},
+		{lat: -33.4252126, lng: -70.6574013, title: 'Los Chinos', description: 'Restaurant de comida china', type: 'China'},
+		{lat: -33.4252126, lng:-70.6574013, title: 'China Wok', description: 'Restaurant de comida china', type: 'China'},
+		{lat: -33.4424559, lng:	-70.6613808, title: 'Panda Junior', description: 'Restaurant de comida china', type: 'China'},
 
-		{lat: -33.442451, lng: -70.6613808, description: '<b>La Piccola Italia</b><br>Restaurant de comida Italiana', type: 'Italiana'},
-		{lat: -33.442451, lng: -70.6613808, description: '<b>Pasta Pazza</b><br>Restaurant de comida Italiana', type: 'Italiana'},
-		{lat: 33.4294151, lng: -70.6358891, description: '<b>Rivoli</b><br>Restaurant de comida Italiana', type: 'Italiana'},
-		{lat: -33.4220367, lng: -70.6203966, description: '<b>Signore</b><br>Restaurant de comida Italiana', type: 'Italiana'},
-		{lat: -33.4318275, lng: -70.6362606, description: '<b>Squadritto Ristorante</b><br>Restaurant de comida Italiana', type: 'Italiana'},
-		{lat: -33.4312815, lng: -70.6349545, description: '<b>Lucila de Nosotros (Da Noi)</b><br>Restaurant de comida Italiana', type: 'Italiana'},
-		{lat: -33.4424224, lng: -70.6558232, description: '<b>Italissimo</b><br>Restaurant de comida Italiana', type: 'Italiana'},
-		{lat: -33.4428057, lng: -70.640972, description: '<b>IL Montrone</b><br>Restaurant de comida Italiana', type: 'Italiana'},
-		{lat: -33.4453569, lng: -70.6368835, description: '<b>Sole Mio</b><br>Restaurant de comida Italiana', type: 'Italiana'},
-		{lat: -33.427164, lng: -70.619889, description: '<b>Fortunata Bistró</b><br>Restaurant de comida Italiana', type: 'Italiana'},
-		{lat: -33.4240479, lng: -70.6140096, description: '<b>Da Renzo</b><br>Restaurant de comida Italiana', type: 'Italiana'},
+		{lat: -33.442451, lng: -70.6613808, title: 'La Piccola Italia', description: 'Restaurant de comida Italiana', type: 'Italiana'},
+		{lat: -33.442451, lng: -70.6613808, title: 'Pasta Pazza', description: 'Restaurant de comida Italiana', type: 'Italiana'},
+		{lat: 33.4294151, lng: -70.6358891, title: 'Rivoli', description: 'Restaurant de comida Italiana', type: 'Italiana'},
+		{lat: -33.4220367, lng: -70.6203966, title: 'Signore', description: 'Restaurant de comida Italiana', type: 'Italiana'},
+		{lat: -33.4318275, lng: -70.6362606, title: 'Squadritto Ristorante', description: 'Restaurant de comida Italiana', type: 'Italiana'},
+		{lat: -33.4312815, lng: -70.6349545, title: 'Lucila de Nosotros (Da Noi)', description: 'Restaurant de comida Italiana', type: 'Italiana'},
+		{lat: -33.4424224, lng: -70.6558232, title: 'Italissimo', description: 'Restaurant de comida Italiana', type: 'Italiana'},
+		{lat: -33.4428057, lng: -70.640972, title: 'IL Montrone', description: 'Restaurant de comida Italiana', type: 'Italiana'},
+		{lat: -33.4453569, lng: -70.6368835, title: 'Sole Mio', description: 'Restaurant de comida Italiana', type: 'Italiana'},
+		{lat: -33.427164, lng: -70.619889, title: 'Fortunata Bistró', description: 'Restaurant de comida Italiana', type: 'Italiana'},
+		{lat: -33.4240479, lng: -70.6140096, title: 'Da Renzo', description: 'Restaurant de comida Italiana', type: 'Italiana'},
 
-		{lat: -33.4102274, lng: -70.6686062, description: '<b>El Cántaro de Oro</b><br>Restaurant de comida Peruana', type: 'Peruana'},
-		{lat: -33.4287426, lng: -70.6432182, description: '<b>La Gloria Sanguchería Peruana/b><br>RSanguchería Peruana', type: 'Peruana'},
-		{lat: -33.4335797, lng: -70.6489081, description: '<b>El Ají Seco</b><br>Restaurant de comida Peruana', type: 'Peruana'},
-		{lat:	-33.4245698,lng: 	-70.6588588, description: '<b>Ché Peruano</b><br>Restaurant de comida Peruana', type: 'Peruana'},
-		{lat: -33.4398386, lng: -70.6409837, description: '<b>Tambo (Lastarria)</b><br>Restaurant de comida Peruana', type: 'Peruana'},
-		{lat: -33.4388985, lng: -70.6357373, description: '<b>El Templo Del Inka</b><br>Restaurant de comida Peruana', type: 'Peruana'},
-		{lat: -33.4349771, lng: -70.6490732, description: '<b>El Encuentro Peruano</b><br>Restaurant de comida Peruana', type: 'Peruana'},
-		{lat: -33.4352188, lng: -70.6486655, description: '<b>Restaurante Victoria</b><br>Restaurant de comida Peruana', type: 'Peruan'},
-		
-
-		{lat: -33.4434129, lng: -70.6568968, description: '<b>Chino</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4434129, lng: -70.6568968, description: '<b>Chino</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4434129, lng: -70.6568968, description: '<b>Chino</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4434129, lng: -70.6568968, description: '<b>Chino</b><br>Restaurant de comida china', type: 'china'},
-		{lat: -33.4434129, lng: -70.6568968, description: '<b>Chino</b><br>Restaurant de comida china', type: 'china'},
+		{lat: -33.4102274, lng: -70.6686062, title: 'El Cántaro de Oro', description: 'Restaurant de comida Peruana', type: 'Peruana'},
+		{lat: -33.4287426, lng: -70.6432182, title: 'La Gloria Sanguchería Peruana', description: 'RSanguchería Peruana', type: 'Peruana'},
+		{lat: -33.4335797, lng: -70.6489081, title: 'El Ají Seco', description: 'Restaurant de comida Peruana', type: 'Peruana'},
+		{lat:	-33.4245698,lng: 	-70.6588588, title: 'Ché Peruano', description: 'Restaurant de comida Peruana', type: 'Peruana'},
+		{lat: -33.4398386, lng: -70.6409837, title: 'Tambo (Lastarria)', description: 'Restaurant de comida Peruana', type: 'Peruana'},
+		{lat: -33.4388985, lng: -70.6357373, title: 'El Templo Del Inka', description: 'Restaurant de comida Peruana', type: 'Peruana'},
+		{lat: -33.4349771, lng: -70.6490732, title: 'El Encuentro Peruano', description: 'Restaurant de comida Peruana', type: 'Peruana'},
+		{lat: -33.4352188, lng: -70.6486655, title: 'Restaurante Victoria', description: 'Restaurant de comida Peruana', type: 'Peruan'},
+		{lat: -33.437663, lng: -70.6532896, title: 'D\' leite', description: 'Restaurant de comida Peruana', type: 'Peruana'},
+			//falta Tailandesa, parrilladas, chilena, cafes, arabe.
+		{lat: -33.4378688, lng: -70.6550062, title: 'Anverbach', description: '<b></b><br>Restaurant de parrilladas', type: 'Parilladas'},
+		{lat: -33.437439, lng: -70.6545395, title: 'La Casona del Centro', description: '<b></b><br>Restaurant ', type: 'Parilladas'},
+		{lat: -33.4416114, lng: -70.6522015, title: 'El Novillero', description: '<b></b><br>Restaurant ', type: 'Parilladas'},
+		{lat: -33.4434129, lng:-70.6472283, title: 'El Cordobes', description: '<b></b><br>Restaurant de comida china', type: 'Parilladas'},
+		{lat: -33.4409208, lng: -70.641745 ,title: 'Restaurant La Parrilla del Chef', description: '<b></b><br>Restaurant', type: 'Parilladas'},
+		{lat: -33.4442517, lng: -70.6363935, title: 'Parrilladas Argentina Hipodromo', description: '<b></b><br>Restaurant', type: 'Parilladas'},
+		{lat: -33.4469828, lng: -70.6482208, title: 'VIKINGOS RESTAURANT', description: '<b></b><br>Restaurant ', type:'Parilladas'},
 
 	];
 
@@ -117,3 +120,15 @@ window.filter = () => {
 
 
 };
+
+
+window.filterRestaurants = () => {
+	const selectedType = document.getElementById('tipo').value;
+	console.log(Object.values(map._layers));
+	Object.values(map._layers).forEach((ml) => {
+		if (ml instanceof L.Marker && ml.options.icon.options.iconUrl == 'img/leaf-green.png'){
+			map.removeLayer(ml);
+		}
+		drawPlaces(selectedType)
+	});
+}

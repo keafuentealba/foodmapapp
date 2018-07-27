@@ -30,19 +30,21 @@
       <div class="row">
         <div class="col">
           <div  id="logoNombre">
-            <img src="img/Food-Mapapp.png">
+            <img src="img/Food-Mapapp.png" class="img-fluid" alt="Responsive image">
           </div>
+          <!-- class="img-fluid" alt="Responsive image" -->
           <div id='map' style='width: 400px; height: 200px;'></div>
-          <select id="tipo" class="form-control" name="">
-            <option value="cl">Chilena</option>
-            <option value="name">Peruana</option>
-            <option value="name">Italiana</option>
-            <option value="name">Tailandesa</option>
-            <option value="name">Arabe</option>
-            <option value="name">China</option>
-            <option value="name">Parilladas</option>
-            <option value="name">Vgetariana</option>
-            <option value="name">Cafés</option>
+          <select id="tipo" onchange="filterRestaurants()" class="form-control" name="">
+            <option value="" hidden>Seleccione filtro</option>
+            <option value="Chilena">Chilena</option>
+            <option value="Peruana">Peruana</option>
+            <option value="Italiana">Italiana</option>
+            <option value="Tailandesa">Tailandesa</option>
+            <option value="Arabe">Arabe</option>
+            <option value="China">China</option>
+            <option value="Parilladas">Parilladas</option>
+            <option value="Vegetariana">Vegetariana</option>
+            <option value="Cafés">Cafés</option>
           </select>
 
 
@@ -63,16 +65,12 @@
               </div>
             </div>
           </div>
-          <!-- Button trigger modal -->
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-            Launch demo modal
-          </button>
 
           <div id="selectedRestaurant" class="modal" tabindex="-1" role="dialog">
             <div class="modal-dialog" role="document">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title">Modal title</h5>
+                  <h5 class="modal-title"><span id="restaurantName"></span></h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
@@ -81,8 +79,7 @@
                   <p id="restaurantInfo"></p>
                 </div>
                 <div class="modal-footer">
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                 </div>
               </div>
             </div>
